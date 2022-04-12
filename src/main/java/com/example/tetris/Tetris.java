@@ -9,6 +9,7 @@ import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyEvent;
@@ -36,12 +37,15 @@ public class Tetris extends Application {
 
     static Pane group = new Pane();
     static Pane groupMenu = new Pane();
+    static Pane groupHightScorePage = new Pane();
     static com.example.tetris.Form object;
     static Scene scene  = new Scene(group, X_MAX + 150, Y_MAX);
     static Scene sceneMenu  = new Scene(groupMenu, X_MAX + 150, Y_MAX);
+    static Scene sceneHighscorePage  = new Scene(groupHightScorePage, X_MAX + 150, Y_MAX);
     static int score = 0;
     static int top = 0;
     static boolean game = true;
+    static TableView tableHightScore;
 
     static Form nextObj = Controller.makeBlock();
     static int linesNo = 0;
@@ -73,13 +77,18 @@ public class Tetris extends Application {
         groupMenu.setLayoutX(140);
 
 
+        tableHightScore = new TableView<>();
+
+
+
 
         VBox vbox = new VBox(buttonStart, buttonGoToHighScorePage, saisiePseudo);
         vbox.setAlignment(Pos.BASELINE_CENTER);
         groupMenu.getChildren().add(vbox);
 
-
+        groupHightScorePage.getChildren().add(tableHightScore);
         sceneMenu = new Scene(groupMenu, 400, 500, Color.BLACK);
+        //sceneHighscorePage = new Scene(groupHightScorePage,400, 500, Color.BLACK);
 
 
 
@@ -132,6 +141,14 @@ public class Tetris extends Application {
 
                 //tl.play();
 
+            }
+        });
+
+        buttonGoToHighScorePage.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                primaryStage.setScene(sceneHighscorePage);
+                game = false;
             }
         });
 
