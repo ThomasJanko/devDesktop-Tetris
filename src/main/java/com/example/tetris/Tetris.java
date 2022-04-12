@@ -87,7 +87,12 @@ public class Tetris extends Application {
 
         //background Image
         Image bg_image = new Image("https://i.pinimg.com/originals/53/b5/45/53b545e413ca93a94b8bd3e53e40c119.png");
-        scene.setFill(new ImagePattern(bg_image));
+        BackgroundImage bgImg = new BackgroundImage(bg_image, BackgroundRepeat.NO_REPEAT,
+                BackgroundRepeat.NO_REPEAT,
+                BackgroundPosition.CENTER,
+                BackgroundSize.DEFAULT);
+        Background bg = new Background(bgImg);
+        group.setBackground(bg);
 
         for(int []a:MESH){
             Arrays.fill(a,0);
