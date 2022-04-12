@@ -92,8 +92,6 @@ public class Tetris extends Application {
 
 
 
-        ////////////
-
         primaryStage = stage;
         primaryStage.setTitle("Tetris");
 
