@@ -139,7 +139,6 @@ public class Tetris extends Application {
             public void run() {
                 Platform.runLater(new Runnable() {
                     public void run() {
-                        -
 
                         if (object.a.getY() == 0 || object.b.getY() == 0 || object.c.getY() == 0
                                 || object.d.getY() == 0)
