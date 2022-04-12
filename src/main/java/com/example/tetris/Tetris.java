@@ -178,6 +178,17 @@ public class Tetris extends Application {
             }
         });
 
+        buttonReturnToMenu.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                primaryStage.setScene(sceneMenu);
+                //gamePaused = false;
+
+                //tl.play();
+
+            }
+        });
+
         buttonGoToHighScorePage.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
