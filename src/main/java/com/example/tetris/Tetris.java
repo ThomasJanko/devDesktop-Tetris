@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Scene;
@@ -69,10 +70,12 @@ public class Tetris extends Application {
         saisiePseudo = new TextArea();
         saisiePseudo.setPrefHeight(100);
         saisiePseudo.setPrefWidth(100);
+        groupMenu.setLayoutX(140);
 
 
 
         VBox vbox = new VBox(buttonStart, buttonGoToHighScorePage, saisiePseudo);
+        vbox.setAlignment(Pos.BASELINE_CENTER);
         groupMenu.getChildren().add(vbox);
 
 
@@ -132,13 +135,14 @@ public class Tetris extends Application {
             }
         });
 
-        //////
+
 
         Timer fall = new Timer();
         TimerTask task = new TimerTask() {
             public void run() {
                 Platform.runLater(new Runnable() {
                     public void run() {
+
 
                         if (object.a.getY() == 0 || object.b.getY() == 0 || object.c.getY() == 0
                                 || object.d.getY() == 0)
@@ -174,9 +178,10 @@ public class Tetris extends Application {
             }
         };
 
+        //Vitesse des block
         fall.schedule(task, 0, 300);
-    }
 
+    }
 
 
 
