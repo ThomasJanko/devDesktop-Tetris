@@ -17,7 +17,7 @@ public class Controller {
     public static Form makeBlock(){
 
         //Couleur aléatoire du block
-        int block = (int) (Math.random()* 1000);
+        int block = (int) (Math.random()* 100);
         String name;
 
         //block composé de 4 petit carré
