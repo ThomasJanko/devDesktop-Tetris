@@ -13,3 +13,13 @@ JANKOWSKi Thomas:
 - Rotation des blocks
 - Déplacement des blocks
 - (Controller) -- Création des blocks
+
+PICHAIMANI Sayan :
+- Creation de la page Highscore
+- Correction apparition couleurs des blocks
+
+CISSE Djibril:
+-
+
+MARCHAO Hugo :
+-
