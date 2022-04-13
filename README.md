@@ -6,12 +6,8 @@ Méthodologie:
 JANKOWSKi Thomas:
 - Scene Principale (Tetris)
 - Fonction run --> blocks qui tombe
-- Ajout des points 
-- Supression d'une ligne lorsqu'elle est complète
 - Ajout du background
 - Fonction Game Over
-- Rotation des blocks
-- Déplacement des blocks
 - (Controller) -- Création des blocks
 
 PICHAIMANI Sayan :
@@ -19,7 +15,12 @@ PICHAIMANI Sayan :
 - Correction apparition couleurs des blocks
 
 CISSE Djibril:
--
+-Rotation des blocks
+-Déplacement des blocks
 
 MARCHAO Hugo :
--
+-Ajout des points 
+- Supression d'une ligne lorsqu'elle est complète
+
+
+
